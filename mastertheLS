@@ -1,1 +1,1 @@
-ls -p -t | tr "\n" "," | sed 's/\(.*\),/\1 /'
+ls -p -t -m | tr -s '[:blank:]' ','
