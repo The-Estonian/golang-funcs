@@ -1,1 +1,1 @@
-ls -p -r| tr "\n" ","
+ls -p| tr "\n" "," | sort -n
