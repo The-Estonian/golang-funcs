@@ -1,8 +1,13 @@
 package main
 
-import "github.com/01-edu/z01"
+import (
+	"github.com/01-edu/z01"
+)
 
 func main() {
-	z01.PrintRune('a')
-	z01.PrintRune('\n')
+	alphabetAsString := "abcdefghijklmnopqrstuvwxyz"
+	alphabetAsRune := []rune(alphabetAsString)
+	for i := 0; i < len(alphabetAsRune); i++ {
+		z01.PrintRune(alphabetAsRune[i])
+	}
 }
