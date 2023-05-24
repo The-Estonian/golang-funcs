@@ -8,5 +8,4 @@ func main() {
 	for i := 0; i < len(alphabetAsRune); i++ {
 		z01.PrintRune(alphabetAsRune[i])
 	}
-	z01.PrintRune('\n')
 }
