@@ -18,7 +18,7 @@ func PrintComb2() {
 						z01.PrintRune(' ')
 					}
 				}
-				fourthLoop = '0'
+				fourthLoop = 0
 			}
 		}
 	}
