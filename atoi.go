@@ -31,6 +31,11 @@ func Atoi(s string) int {
 	stringTrigger := false
 	negativePositive := false
 
+	// check if any string is entered
+	if len(s) == 0 {
+		return 0
+	}
+
 	// Check for +/- marks and return zero if matches
 	if string(s[0]) == "+" && string(s[1]) == "+" ||
 		string(s[0]) == "-" && string(s[1]) == "-" ||
