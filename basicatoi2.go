@@ -1,6 +1,6 @@
 package piscine
 
-func atoiConverter(n string) int {
+func atoiConverter2(n string) int {
 	if n == "0" {
 		return 0
 	} else if n == "1" {
@@ -30,7 +30,7 @@ func BasicAtoi2(s string) int {
 	sum := 0
 	stringTrigger := false
 	for i := 0; i < len(s); i++ {
-		if atoiConverter(string(s[i])) == -1 {
+		if atoiConverter2(string(s[i])) == -1 {
 			stringTrigger = true
 		}
 		power := 1
@@ -39,7 +39,7 @@ func BasicAtoi2(s string) int {
 				power *= 10
 			}
 		}
-		sum += atoiConverter(string(s[i])) * power
+		sum += atoiConverter2(string(s[i])) * power
 	}
 	if stringTrigger {
 		return 0
