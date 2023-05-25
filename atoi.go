@@ -37,11 +37,13 @@ func Atoi(s string) int {
 	}
 
 	// Check for +/- marks and return zero if matches
-	if string(s[0]) == "+" && string(s[1]) == "+" ||
-		string(s[0]) == "-" && string(s[1]) == "-" ||
-		string(s[0]) == "+" && string(s[1]) == "-" ||
-		string(s[0]) == "-" && string(s[1]) == "+" {
-		return 0
+	if len(s) > 1 {
+		if string(s[0]) == "+" && string(s[1]) == "+" ||
+			string(s[0]) == "-" && string(s[1]) == "-" ||
+			string(s[0]) == "+" && string(s[1]) == "-" ||
+			string(s[0]) == "-" && string(s[1]) == "+" {
+			return 0
+		}
 	}
 
 	// check for +/- mark and cut string if matches
