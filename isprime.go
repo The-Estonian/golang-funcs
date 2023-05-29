@@ -1,6 +1,9 @@
 package piscine
 
 func IsPrime(nb int) bool {
+	if nb == 1 || nb < 0 {
+		return false
+	}
 	num := 2
 	answer := true
 	for num <= nb/2 {
