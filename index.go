@@ -14,14 +14,18 @@ func Index(s string, toFind string) int {
 		if string(s[i]) == string(toFind[0]) {
 			iteratorCounter := i + len(toFind) - 1
 			counter := 0
+			if iteratorCounter > len(s)-i {
+				return -1
+			}
 			for x := i; x <= iteratorCounter; x++ {
-				if string(s[x]) == string(toFind[x-i]) {
+				if string(s[x]) == string(toFind[counter]) {
 					counter++
 				}
 			}
 			if counter == len(toFind) {
 				return i
 			}
+			counter = 0
 		}
 	}
 	return -1
