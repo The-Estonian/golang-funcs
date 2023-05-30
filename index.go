@@ -6,8 +6,12 @@ func Index(s string, toFind string) int {
 			return i
 		}
 		if string(s[i]) == string(toFind[0]) {
+			iteratorCounter := len(toFind)
+			if rune(s[i-1]) == 34 {
+				iteratorCounter = len(toFind) + 3
+			}
 			counter := 0
-			for x := i; x < len(toFind)+1; x++ {
+			for x := i; x <= iteratorCounter; x++ {
 				if string(s[x]) == string(toFind[x-i]) {
 					counter++
 				}
