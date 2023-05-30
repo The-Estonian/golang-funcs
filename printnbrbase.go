@@ -15,6 +15,9 @@ func PrintNbrBase(nbr int, base string) {
 					toRun = false
 					break
 				}
+				if toRun == false {
+					break
+				}
 			}
 		}
 		if toRun {
