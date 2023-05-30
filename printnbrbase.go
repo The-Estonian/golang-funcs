@@ -41,5 +41,8 @@ func PrintNbrBase(nbr int, base string) {
 				z01.PrintRune(rune(base[numberSort[i]]))
 			}
 		}
+	} else {
+		z01.PrintRune('N')
+		z01.PrintRune('V')
 	}
 }
