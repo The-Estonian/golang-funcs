@@ -6,6 +6,11 @@ import (
 
 func PrintNbrBase(nbr int, base string) {
 	toRun := true
+	overflow := false
+	if nbr == -9223372036854775808 {
+		nbr = -9223372036854775808 / 10
+		overflow = true
+	}
 	if len(base) >= 2 {
 		for x := 0; x < len(base); x++ {
 			for y := x + 1; y < len(base); y++ {
@@ -21,6 +26,7 @@ func PrintNbrBase(nbr int, base string) {
 			}
 		}
 		if toRun {
+
 			numberSort := []int{}
 			trigger := false
 			if nbr < 0 {
@@ -42,6 +48,9 @@ func PrintNbrBase(nbr int, base string) {
 			}
 			for i := len(numberSort) - 1; i >= 0; i-- {
 				z01.PrintRune(rune(base[numberSort[i]]))
+			}
+			if overflow {
+				z01.PrintRune('8')
 			}
 		}
 	} else {
