@@ -1,8 +1,6 @@
 package piscine
 
 func FirstRune(s string) rune {
-	if rune(s[0]) < 31 || rune(s[0]) > 127 {
-		return rune(s[0] - 223)
-	}
-	return rune(s[0])
+	characters := []rune(s)
+	return characters[0]
 }
