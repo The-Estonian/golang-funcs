@@ -16,7 +16,9 @@ func main() {
 		}
 	}
 	for x := 0; x < len(arguments); x++ {
-		z01.PrintRune(rune(arguments[x][0]))
+		for y := 0; y < len(arguments[x]); y++ {
+			z01.PrintRune(rune(arguments[x][y]))
+		}
 		z01.PrintRune('\n')
 	}
 }
