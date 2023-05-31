@@ -10,5 +10,4 @@ func main() {
 	for i := 0; i < len(arguments); i++ {
 		z01.PrintRune(rune(arguments[i]))
 	}
-	z01.PrintRune(rune('\n'))
 }
