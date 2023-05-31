@@ -7,10 +7,15 @@ import (
 )
 
 func main() {
-	arguments := os.Args[0][2:]
-	argumentsRunes := []rune(arguments)
-	for i := 0; i < len(argumentsRunes); i++ {
-		z01.PrintRune(rune(arguments[i]))
+	arguments := os.Args[0][1:]
+	index := 0
+	for i := 0; i < len(arguments); i++ {
+		if arguments[i] == '/' {
+			index = i
+		}
+	}
+	for j := index + 1; j < len(arguments); j++ {
+		z01.PrintRune(rune(arguments[j]))
 	}
 	z01.PrintRune(rune('\n'))
 }
