@@ -3,7 +3,7 @@ package piscine
 func AtoiBase(s string, base string) int {
 	for a := 0; a < len(s); a++ {
 		for b := a + 1; b < len(base); b++ {
-			if base[a] == base[b] || base[b] == '-' || base[b] == '+' {
+			if base[a] == base[b] || base[a] == '-' || base[a] == '+' {
 				return 0
 			}
 		}
