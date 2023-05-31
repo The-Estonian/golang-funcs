@@ -5,26 +5,16 @@ import (
 	"os"
 )
 
-func SortIntegerTable(table []int) {
-	for i := 0; i < len(table); i++ {
-		for j := 0; j < len(table); j++ {
-			if table[i] < table[j] {
-				table[i], table[j] = table[j], table[i]
-			}
-		}
-	}
-}
-
 func main() {
 	arguments := os.Args[1:]
 	orderTrigger := false
 	if len(arguments) < 1 || arguments[0] == "--help" || arguments[0] == "-h" {
 		fmt.Println(`--insert
   -i
-         This flag inserts the string into the string passed as argument.
+	 This flag inserts the string into the string passed as argument.
 --order
   -o
-         This flag will behave like a boolean, if it is called it will order the argument.`)
+	 This flag will behave like a boolean, if it is called it will order the argument.`)
 		return
 	}
 	cleanArguments := []string{}
