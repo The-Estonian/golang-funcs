@@ -48,6 +48,9 @@ func BasicAtoi(s string) int {
 
 func main() {
 	arguments := os.Args[1:]
+	if len(arguments) < 1 {
+		return
+	}
 	incomingMessage := []int{}
 	decoder := map[int]int{
 		1:  97,
