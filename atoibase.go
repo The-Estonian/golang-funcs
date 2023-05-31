@@ -1,13 +1,17 @@
 package piscine
 
 func AtoiBase(s string, base string) int {
+	for a := 0; a < len(s); a++ {
+		for b := a + 1; b < len(base); b++ {
+			if base[a] == base[b] || base[b] == '-' || base[b] == '+' {
+				return 0
+			}
+		}
+	}
 	sum := 0
 	indexList := []int{}
 	for x := 0; x < len(s); x++ {
 		for y := 0; y < len(base); y++ {
-			if base[x] == base[y] || base[y] == '-' || base[y] == '+' {
-				return 0
-			}
 			if s[x] == base[y] {
 				indexList = append(indexList, y)
 			}
