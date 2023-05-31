@@ -8,14 +8,13 @@ import (
 
 func main() {
 	arguments := os.Args[0][1:]
-	index := 0
 	for i := 0; i < len(arguments); i++ {
 		if arguments[i] == '/' {
-			index = i
+			arguments = arguments[i+1:]
 		}
 	}
-	for j := index + 1; j < len(arguments); j++ {
-		z01.PrintRune(rune(arguments[j]))
+	for _, letter := range arguments {
+		z01.PrintRune(letter)
 	}
-	z01.PrintRune(rune('\n'))
+	z01.PrintRune('\n')
 }
