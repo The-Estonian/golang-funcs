@@ -1,7 +1,6 @@
 package piscine
 
 func AtoiBase(s string, base string) int {
-
 	sum := 0
 	indexList := []int{}
 	for x := 0; x < len(s); x++ {
