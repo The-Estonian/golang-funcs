@@ -11,7 +11,11 @@ func SplitWhiteSpaces(s string) []string {
 			cutOff += string(s[i])
 		}
 	}
-	returnSlice = append(returnSlice, cutOff)
+	for i := 0; i < len(cutOff); i++ {
+		if string(cutOff[i]) != " " {
+			returnSlice = append(returnSlice, cutOff[i:])
+		}
+	}
 
 	return returnSlice
 }
