@@ -21,6 +21,7 @@ func main() {
 			if err != nil {
 				printStr("ERROR: ")
 				printStr(err.Error())
+				printStr("\n")
 				os.Exit(1)
 			}
 			printStr(string(text))
