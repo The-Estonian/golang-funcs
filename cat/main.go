@@ -23,7 +23,6 @@ func main() {
 				printStr(err.Error())
 			}
 			printStr(string(text))
-			printStr("\n")
 		}
 	} else {
 		for {
