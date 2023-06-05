@@ -27,9 +27,11 @@ func main() {
 		}
 	} else {
 	}
-	for {
+	x := 0
+	for x < 1 {
 		buffer := make([]byte, 1024)
 		ui, _ := os.Stdin.Read(buffer)
 		printStr(string(buffer[:ui]))
+		x++
 	}
 }
