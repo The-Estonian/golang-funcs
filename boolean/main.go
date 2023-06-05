@@ -18,10 +18,7 @@ func even(nbr int) int {
 }
 
 func isEven(nbr int) bool {
-	if even(nbr) == 2 {
-		return true
-	}
-	return false
+	return even(nbr) == 0
 }
 
 func main() {
