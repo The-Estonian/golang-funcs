@@ -52,8 +52,7 @@ func main() {
 		args = args[2:]
 		if len(args) > 0 {
 			for i := 0; i < len(args); i++ {
-				byteText, err := os.ReadFile(args[i])
-				text := []rune(string(byteText))
+				text, err := os.ReadFile(args[i])
 				if err != nil {
 					fmt.Println(err.Error())
 					continue
@@ -63,11 +62,8 @@ func main() {
 				}
 				fmt.Printf("==> %v <==\n", args[i])
 				if len(text) <= BasicAtoi(number) {
-					answer := []byte{}
-					for y := 0; y < len(text)-1; y++ {
-						answer = append(answer, byte(text[y]))
-					}
-					fmt.Fprint(os.Stderr, string(answer)+"\n")
+					// fmt.Println(string(text[:len(text)-1]))
+					fmt.Println(string(text))
 				} else {
 					for j := len(text) - BasicAtoi(number) + 1; j < len(text); j++ {
 						fmt.Print(string(text[j]))
