@@ -25,6 +25,7 @@ func main() {
 				os.Exit(1)
 			}
 			printStr(string(text))
+			printStr("\n")
 		}
 	} else {
 		x := 0
