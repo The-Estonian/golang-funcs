@@ -52,7 +52,8 @@ func main() {
 		args = args[2:]
 		if len(args) > 0 {
 			for i := 0; i < len(args); i++ {
-				text, err := os.ReadFile(args[i])
+				byteText, err := os.ReadFile(args[i])
+				text := []rune(string(byteText))
 				if err != nil {
 					fmt.Println(err.Error())
 					continue
