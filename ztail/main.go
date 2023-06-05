@@ -74,8 +74,8 @@ func main() {
 					end--
 				}
 				fmt.Printf("%s\n", text[start:end])
+				counter++
 			}
-			counter++
 			if trigger {
 				os.Exit(1)
 			}
