@@ -57,8 +57,8 @@ func main() {
 					fmt.Println(err.Error())
 					continue
 				}
-				if len(text) < BasicAtoi(number) {
-					os.Exit(1)
+				for i := 0; i < len(args); i++ {
+					fmt.Println(args[i])
 				}
 				if i > 0 {
 					fmt.Println("")
@@ -71,6 +71,7 @@ func main() {
 				}
 				fmt.Println("")
 			}
+			os.Exit(1)
 		}
 	}
 }
