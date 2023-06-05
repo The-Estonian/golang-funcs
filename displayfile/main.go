@@ -12,7 +12,7 @@ func main() {
 		fmt.Println("File name missing")
 	} else if len(args) == 1 {
 		text, _ := ioutil.ReadFile(args[0])
-		fmt.Println(string(text))
+		fmt.Print(string(text))
 	} else {
 		fmt.Println("Too many arguments")
 	}
