@@ -66,6 +66,7 @@ func main() {
 				}
 				fmt.Println("")
 			}
+			os.Exit(1)
 		}
 	}
 }
