@@ -11,10 +11,8 @@ func main() {
 	if len(args) == 0 {
 		fmt.Println("File name missing")
 	} else if len(args) == 1 {
-		file, _ := os.Open(args[0])
-		text, _ := ioutil.ReadAll(file)
+		text, _ := ioutil.ReadFile(args[0])
 		fmt.Println(string(text))
-		defer file.Close()
 	} else {
 		fmt.Println("Too many arguments")
 	}
