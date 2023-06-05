@@ -51,16 +51,17 @@ func main() {
 		number := args[1]
 		args = args[2:]
 		if len(args) > 0 {
-			for i := 0; i < len(args); i++ {
-				text, err := os.ReadFile(args[i])
+			counter := 0
+			for _, i := range args {
+				text, err := os.ReadFile(i)
 				if err != nil {
 					fmt.Println(err.Error())
 					continue
 				}
-				if i > 0 {
+				if counter > 0 {
 					fmt.Println(``)
 				}
-				fmt.Printf("==> %v <==\n", args[i])
+				fmt.Printf("==> %v <==\n", i)
 				if len(text) <= BasicAtoi(number) {
 					if text[len(text)-1] == '\n' {
 						fmt.Printf("%s\n", text[:len(text)-1])
@@ -75,6 +76,7 @@ func main() {
 					fmt.Println(``)
 					os.Exit(1)
 				}
+				counter++
 			}
 		}
 	}
