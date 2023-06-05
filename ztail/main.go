@@ -63,11 +63,12 @@ func main() {
 				fmt.Printf("==> %v <==\n", args[i])
 				if len(text) <= BasicAtoi(number) {
 					if text[len(text)-1] == '\n' {
-						fmt.Print(string(text[:len(text)-1]))
+						fmt.Println(string(text[:len(text)-1]))
 					} else {
-						fmt.Print(string(text))
+						fmt.Println(string(text))
 					}
-					fmt.Print("\n")
+					os.Exit(1)
+					break
 				} else {
 					for j := len(text) - BasicAtoi(number) + 1; j < len(text); j++ {
 						fmt.Print(string(text[j]))
@@ -75,7 +76,6 @@ func main() {
 					fmt.Println("")
 				}
 			}
-			os.Exit(1)
 		}
 	}
 }
