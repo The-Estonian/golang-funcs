@@ -27,10 +27,12 @@ func main() {
 			printStr(string(text))
 		}
 	} else {
-		for {
+		x := 0
+		for x < 10 {
 			buffer := make([]byte, 1024)
 			sentence, _ := os.Stdin.Read(buffer)
 			printStr(string(buffer[:sentence]))
+			x++
 		}
 	}
 }
