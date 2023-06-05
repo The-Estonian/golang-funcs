@@ -72,7 +72,6 @@ func main() {
 					os.Exit(1)
 				} else {
 					fmt.Printf("%s\n", text[len(text)-BasicAtoi(number):])
-					os.Exit(1)
 				}
 				counter++
 			}
