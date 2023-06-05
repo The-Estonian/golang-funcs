@@ -52,11 +52,13 @@ func main() {
 		args = args[2:]
 		if len(args) > 0 {
 			counter := 0
+			trigger := false
 			for _, i := range args {
 				text, err := os.ReadFile(i)
 				if err != nil {
 					fmt.Println(err.Error())
 					counter++
+					trigger = true
 					continue
 				}
 				if counter > 0 {
@@ -72,9 +74,11 @@ func main() {
 					end--
 				}
 				fmt.Printf("%s\n", text[start:end])
-				os.Exit(1)
 			}
 			counter++
+			if trigger {
+				os.Exit(1)
+			}
 		}
 	}
 }
