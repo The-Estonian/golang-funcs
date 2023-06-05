@@ -75,7 +75,6 @@ func main() {
 					fmt.Println("")
 				}
 			}
-			fmt.Println("")
 			os.Exit(1)
 		}
 	}
