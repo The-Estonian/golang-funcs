@@ -55,6 +55,7 @@ func main() {
 			for _, i := range args {
 				text, err := os.ReadFile(i)
 				if err != nil {
+					fmt.Println(err.Error())
 					counter++
 					continue
 				}
