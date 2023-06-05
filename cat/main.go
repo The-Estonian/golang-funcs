@@ -22,7 +22,6 @@ func main() {
 				printStr("ERROR: ")
 				printStr(err.Error())
 			}
-			z01.PrintRune('\n')
 			printStr(string(text))
 			printStr("\n")
 		}
