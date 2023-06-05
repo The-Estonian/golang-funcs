@@ -67,7 +67,7 @@ func main() {
 					if text[len(text)-1] == '\n' {
 						fmt.Printf("%s", text[:len(text)-1])
 					} else {
-						fmt.Printf("%s", text)
+						fmt.Printf("%s\n", text)
 					}
 					os.Exit(1)
 				} else {
