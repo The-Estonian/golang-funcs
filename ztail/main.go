@@ -63,11 +63,11 @@ func main() {
 				}
 				fmt.Printf("==> %v <==\n", args[i])
 				if len(text) <= BasicAtoi(number) {
-					answer := []rune{}
+					answer := []byte{}
 					for y := 0; y < len(text)-1; y++ {
-						answer = append(answer, text[y])
+						answer = append(answer, byte(text[y]))
 					}
-					fmt.Print(string(answer))
+					fmt.Fprint(os.Stderr, string(answer)+"\n")
 				} else {
 					for j := len(text) - BasicAtoi(number) + 1; j < len(text); j++ {
 						fmt.Print(string(text[j]))
