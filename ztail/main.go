@@ -31,6 +31,20 @@ func atoiConverter(n string) int {
 	}
 }
 
+func BasicAtoi(s string) int {
+	sum := 0
+	for i := 0; i < len(s); i++ {
+		power := 1
+		if i < len(s) {
+			for j := 1; j < len(s)-i; j++ {
+				power *= 10
+			}
+		}
+		sum += atoiConverter(string(s[i])) * power
+	}
+	return sum
+}
+
 func main() {
 	args := os.Args[1:]
 	if args[0] == "-c" {
@@ -47,7 +61,7 @@ func main() {
 					fmt.Println("")
 				}
 				fmt.Printf("==> %v <==\n", args[i])
-				for j := len(text) - atoiConverter(number) + 1; j < len(text); j++ {
+				for j := len(text) - BasicAtoi(number) + 1; j < len(text); j++ {
 					fmt.Print(string(text[j]))
 				}
 				fmt.Println("")
