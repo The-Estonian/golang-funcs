@@ -68,7 +68,7 @@ func main() {
 					fmt.Println("")
 					os.Exit(1)
 				} else {
-					for j := len(text) - BasicAtoi(number)+1; j < len(text); j++ {
+					for j := len(text) - BasicAtoi(number) + 1; j < len(text); j++ {
 						fmt.Print(string(text[j]))
 					}
 					fmt.Println("")
