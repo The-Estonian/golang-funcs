@@ -22,7 +22,6 @@ func isEven(nbr int) bool {
 		return true
 	}
 	return false
-
 }
 
 func main() {
