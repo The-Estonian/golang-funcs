@@ -64,6 +64,9 @@ func BasicAtoi2(s string) int {
 		negTrigger = true
 		s = s[1:]
 	}
+	if string(s) == "0" {
+		return 0
+	}
 	for i := 0; i < len(s); i++ {
 		if atoiConverter2(string(s[i])) == -1 {
 			stringTrigger = true
@@ -181,12 +184,12 @@ func main() {
 		}
 		os.Stdout.WriteString(ReturnNbr(multiply(BasicAtoi2(args[0]), BasicAtoi2(args[2]))) + "\n")
 	} else if args[1] == "/" {
-		if divide(BasicAtoi2(args[0]), BasicAtoi2(args[2])) < -9223372036854775807 ||
-			divide(BasicAtoi2(args[0]), BasicAtoi2(args[2])) > 9223372036854775807 {
-			return
-		}
 		if BasicAtoi2(args[2]) == 0 {
 			os.Stdout.WriteString("No division by 0" + "\n")
+			return
+		}
+		if divide(BasicAtoi2(args[0]), BasicAtoi2(args[2])) < -9223372036854775807 ||
+			divide(BasicAtoi2(args[0]), BasicAtoi2(args[2])) > 9223372036854775807 {
 			return
 		}
 		os.Stdout.WriteString(ReturnNbr(divide(BasicAtoi2(args[0]), BasicAtoi2(args[2]))) + "\n")
