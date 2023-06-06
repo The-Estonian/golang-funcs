@@ -164,10 +164,10 @@ func main() {
 	if !IsNumeric(args[0]) || !IsNumeric(args[2]) {
 		return
 	}
-	if BasicAtoi2(args[0]) > 9223372036854775807 ||
-		BasicAtoi2(args[0]) < -9223372036854775807 ||
-		BasicAtoi2(args[2]) > 9223372036854775807 ||
-		BasicAtoi2(args[2]) < -9223372036854775807 {
+	if BasicAtoi2(args[0]) >= 9223372036854775807 ||
+		BasicAtoi2(args[0]) <= -9223372036854775807 ||
+		BasicAtoi2(args[2]) >= 9223372036854775807 ||
+		BasicAtoi2(args[2]) <= -9223372036854775807 {
 		return
 	}
 	if args[1] == "+" {
