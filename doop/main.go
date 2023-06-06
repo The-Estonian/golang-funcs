@@ -158,6 +158,9 @@ func modulo(a, b int) int {
 
 func main() {
 	args := os.Args[1:]
+	if len(args) < 3 {
+		return
+	}
 	if !IsNumeric(args[0]) || !IsNumeric(args[2]) {
 		return
 	}
