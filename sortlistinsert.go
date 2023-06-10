@@ -13,7 +13,7 @@ func SortListInsert(l *NodeI, data_ref int) *NodeI {
 		}
 		for ; nodeLooper.Data < data_ref; nodeLooper = nodeLooper.Next {
 			if nodeLooper.Next != nil {
-				if nodeLooper.Next.Data > data_ref {
+				if nodeLooper.Next.Data >= data_ref {
 					input.Next = nodeLooper.Next
 					nodeLooper.Next = input
 				}
